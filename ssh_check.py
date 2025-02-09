@@ -4,10 +4,10 @@ import csv
 with open('sshInfo.csv', mode='r', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
-        ip = reader['host']
+        ip = row['host']
 
-ans = subprocess.call(["ping", {host}])
+ans = subprocess.call(["ping", "-c", "2", [ip])
 if ans == 0:
-    print("Command executed.")
+    print("ping was succesful.")
 else:
-    print("Command failed.", return_code)
+    print("Ping failed, command is {ip} with return code {ans}|)
