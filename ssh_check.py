@@ -10,4 +10,4 @@ with open('sshInfo.csv', mode='r', encoding='utf-8') as file:
         if ans == 0:
             print("ping was succesful.")
         else:
-            print("Ping failed, command is {ip} with return code {ans}|)
+            print("Ping failed, command is {ip} with return code {ans})
